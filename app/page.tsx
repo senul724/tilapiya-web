@@ -113,9 +113,9 @@ export default function Index() {
 	const prevSlide = (slide - 1 + heroSlides.length) % heroSlides.length;
 
 	return (
-		<div className="min-h-screen">
+		<div className="">
 			{/* HERO */}
-			<section className="relative min-h-screen flex items-end overflow-hidden grain">
+			<section className="relative min-h-[100dvh] flex items-end overflow-hidden grain">
 				<div className="absolute inset-0">
 					{heroSlides.map((s, i) => (
 						<img
