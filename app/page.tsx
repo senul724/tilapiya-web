@@ -131,6 +131,7 @@ export default function Index() {
 						/>
 					))}
 					{/* Bottom text-area gradient — dark only where the text sits */}
+					<div className="absolute inset-0 bg-black/30 sm:bg-black/20" />
 					<div className="absolute bottom-0 left-0 w-full h-full  bg-gradient-to-tr from-black via-black/60  to-black/20" />
 				</div>
 
