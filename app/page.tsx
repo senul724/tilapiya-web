@@ -182,7 +182,7 @@ export default function Index() {
 			</section>
 
 			{/* STORY */}
-			<section id="story" className="py-32 px-6">
+			<section id="story" className="py-5 sm:py-32 px-6">
 				<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 					<div className="relative grid grid-cols-2 gap-4">
 						<img
