@@ -1,6 +1,5 @@
 "use client";
 
-
 // export const Route = createFileRoute("/gallery")({
 // 	head: () => ({
 // 		meta: [
@@ -85,7 +84,6 @@ const photos = [
 export default function GalleryPage() {
 	return (
 		<div className="min-h-screen">
-
 			<section className="pt-40 pb-16 px-6 border-b border-border">
 				<div className="max-w-7xl mx-auto">
 					<p className="eyebrow mb-6">Through the lens</p>
@@ -93,7 +91,7 @@ export default function GalleryPage() {
 						The <span className="italic text-primary">Gallery</span>.
 					</h1>
 					<p className="mt-8 max-w-xl text-muted-foreground">
-						Evenings at Race Course — the room, the plates, the bar, the band. A
+						Evenings at Race Course. The room, the plates, the bar, the band. A
 						small window into what waits for you at Tilapiya.
 					</p>
 				</div>
@@ -133,7 +131,6 @@ export default function GalleryPage() {
 					+94 77 949 4394
 				</a>
 			</section>
-
 		</div>
 	);
 }

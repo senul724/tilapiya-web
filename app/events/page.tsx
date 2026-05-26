@@ -28,7 +28,6 @@ import Link from "next/link";
 export default function EventsPage() {
 	return (
 		<div className="min-h-screen">
-
 			{/* HERO */}
 			<section className="relative pt-40 pb-24 px-6 overflow-hidden border-b border-border">
 				<img
@@ -46,7 +45,7 @@ export default function EventsPage() {
 						Celebrate <span className="italic text-primary">at Tilapiya</span>.
 					</h1>
 					<p className="mt-8 max-w-2xl text-muted-foreground text-base md:text-lg leading-relaxed">
-						From intimate gatherings to grand celebrations — we've got the space
+						From intimate gatherings to grand celebrations. We've got the space
 						and the vibe for every occasion. Free BYOB with zero corkage,
 						private rooms with karaoke, and live bands every day of the week.
 					</p>
@@ -191,7 +190,6 @@ export default function EventsPage() {
 					</Link>
 				</div>
 			</section>
-
 		</div>
 	);
 }

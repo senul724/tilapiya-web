@@ -114,7 +114,6 @@ export default function Index() {
 
 	return (
 		<div className="min-h-screen">
-
 			{/* HERO */}
 			<section className="relative min-h-screen flex items-end overflow-hidden grain">
 				<div className="absolute inset-0">
@@ -136,16 +135,13 @@ export default function Index() {
 				</div>
 
 				<div className="relative z-10 max-w-7xl mx-auto px-6 pb-24 md:pb-32 w-full">
-					<p className="eyebrow mb-6 text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-						Race Course Arcade · Colombo 07
-					</p>
 					<h1 className="font-display text-5xl sm:text-7xl md:text-8xl leading-[0.95] max-w-4xl text-foreground drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
 						Dining & socialising,
 						<br />
 						<span className="italic text-primary">by friends for friends.</span>
 					</h1>
 					<p className="mt-8 max-w-xl text-base md:text-lg text-foreground/85 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
-						An indulgent escape in the midst of the city — soul-soothing
+						An indulgent escape in the midst of the city, soul-soothing
 						delicacies, BYOB, live music every night.
 					</p>
 					<div className="mt-10 flex flex-wrap gap-4">
@@ -163,17 +159,22 @@ export default function Index() {
 							Reserve a Table
 						</a>
 					</div>
-					<div className="mt-12 flex gap-2">
-						{heroSlides.map((_, i) => (
-							<button
-								key={i}
-								aria-label={`Go to slide ${i + 1}`}
-								onClick={() => setSlide(i)}
-								className={`h-[2px] transition-all duration-500 ${
-									i === slide ? "w-10 bg-primary" : "w-5 bg-foreground/25"
-								}`}
-							/>
-						))}
+					<div className="mt-16 pt-6 border-t border-white/10 flex items-center justify-between gap-6 flex-wrap">
+						<div className="flex gap-2">
+							{heroSlides.map((_, i) => (
+								<button
+									key={i}
+									aria-label={`Go to slide ${i + 1}`}
+									onClick={() => setSlide(i)}
+									className={`h-[2px] transition-all duration-500 ${
+										i === slide ? "w-10 bg-primary" : "w-5 bg-foreground/25"
+									}`}
+								/>
+							))}
+						</div>
+						<div className="text-[0.55rem] uppercase tracking-[0.4em] text-foreground/60 text-right">
+							Race Course Arcade <span className="text-primary mx-2">·</span> Colombo 07
+						</div>
 					</div>
 				</div>
 			</section>
@@ -453,7 +454,6 @@ export default function Index() {
 					</div>
 				</div>
 			</section>
-
 		</div>
 	);
 }

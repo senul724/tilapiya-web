@@ -26,7 +26,7 @@ export default function SpecialsPage() {
 						Chef's <span className="italic text-primary">specials.</span>
 					</h1>
 					<p className="mt-6 max-w-xl text-muted-foreground leading-relaxed">
-						A handful of plates and pours we're especially proud of this week —
+						A handful of plates and pours we're especially proud of this week
 						from the wood-fire kitchen and the marble bar.
 					</p>
 				</div>
@@ -86,7 +86,6 @@ export default function SpecialsPage() {
 					</div>
 				</div>
 			</section>
-
 		</div>
 	);
 }

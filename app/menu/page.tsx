@@ -86,8 +86,6 @@ export default function MenuPage() {
 
 	return (
 		<div className="min-h-screen">
-
-			{/* HEADER */}
 			<section className="pt-40 pb-20 px-6 border-b border-border">
 				<div className="max-w-7xl mx-auto">
 					<p className="eyebrow mb-6">À la carte</p>
@@ -95,7 +93,7 @@ export default function MenuPage() {
 						The <span className="italic text-primary">Menu </span>.
 					</h1>
 					<p className="mt-8 max-w-xl text-muted-foreground">
-						A living document — prepared fresh, served with intent. Prices in
+						A living document, prepared fresh, served with intent. Prices in
 						LKR. BYOB always welcome.
 					</p>
 					<div className="mt-10 flex flex-wrap gap-3">
@@ -189,7 +187,6 @@ export default function MenuPage() {
 					</section>
 				))}
 			</div>
-
 		</div>
 	);
 }
