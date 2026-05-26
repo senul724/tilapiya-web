@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Tilapiya",
+	title: "Tilapiya Colombo",
 	description: "Best BYOB restuarant in Colombo",
 };
 
