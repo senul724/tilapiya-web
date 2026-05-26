@@ -115,7 +115,7 @@ export default function Index() {
 	return (
 		<div className="min-h-screen">
 			{/* HERO */}
-			<section className="relative min-h-screen flex items-end overflow-hidden grain">
+			<section className="relative min-h-[100dvh] flex items-end overflow-hidden grain">
 				<div className="absolute inset-0">
 					{heroSlides.map((s, i) => (
 						<img
@@ -131,35 +131,35 @@ export default function Index() {
 						/>
 					))}
 					{/* Bottom text-area gradient — dark only where the text sits */}
-					<div className="absolute bottom-0 left-0 w-full h-full  bg-gradient-to-tr from-black via-black/60  to-black/20" />
+					<div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/90 via-black/50 to-black/10 sm:bg-gradient-to-tr sm:from-black sm:via-black/60 sm:to-black/20" />
 				</div>
 
-				<div className="relative z-10 max-w-7xl mx-auto px-6 pb-24 md:pb-32 w-full">
-					<h1 className="font-display text-5xl sm:text-7xl md:text-8xl leading-[0.95] max-w-4xl text-foreground drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
+				<div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 sm:pb-24 md:pb-32 w-full">
+					<h1 className="font-display text-4xl sm:text-6xl md:text-8xl leading-[1.05] sm:leading-[0.95] max-w-4xl text-foreground drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
 						Dining & socialising,
 						<br />
 						<span className="italic text-primary">by friends for friends.</span>
 					</h1>
-					<p className="mt-8 max-w-xl text-base md:text-lg text-foreground/85 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+					<p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg text-foreground/90 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
 						An indulgent escape in the midst of the city, soul-soothing
 						delicacies, BYOB, live music every night.
 					</p>
-					<div className="mt-10 flex flex-wrap gap-4">
+					<div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
 						<Link
 							href="/menu"
-							className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-xs uppercase tracking-[0.3em] hover:bg-primary/90 transition-all"
+							className="inline-flex w-full sm:w-auto justify-center items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] hover:bg-primary/90 transition-all"
 						>
 							View Our Menu
 							<span aria-hidden>→</span>
 						</Link>
 						<a
 							href="tel:+94779494394"
-							className="inline-flex items-center gap-3 border border-foreground/30 text-foreground px-8 py-4 text-xs uppercase tracking-[0.3em] hover:border-primary hover:text-primary transition-all"
+							className="inline-flex w-full sm:w-auto justify-center items-center gap-3 border border-foreground/30 text-foreground px-8 py-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] hover:border-primary hover:text-primary transition-all"
 						>
 							Reserve a Table
 						</a>
 					</div>
-					<div className="mt-16 pt-6 border-t border-white/10 flex items-center justify-between gap-6 flex-wrap">
+					<div className="mt-12 sm:mt-16 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
 						<div className="flex gap-2">
 							{heroSlides.map((_, i) => (
 								<button
@@ -172,7 +172,7 @@ export default function Index() {
 								/>
 							))}
 						</div>
-						<div className="text-[0.55rem] uppercase tracking-[0.4em] text-foreground/60 text-right">
+						<div className="text-[0.55rem] uppercase tracking-[0.4em] text-foreground/60 text-left sm:text-right">
 							Race Course Arcade <span className="text-primary mx-2">·</span> Colombo 07
 						</div>
 					</div>
