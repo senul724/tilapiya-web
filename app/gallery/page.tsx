@@ -25,13 +25,13 @@ const photos = [
 		src: "/dine-potrait.jpg",
 		alt: "Dine IN",
 		tag: "Dine In",
-		span: "row-span-2",
+		span: "sm:row-span-2",
 	},
 	{
 		src: "/exterior.jpg",
 		alt: "Restaurant Exterior",
 		tag: "Roadside View",
-		span: "col-span-2 row-span-2",
+		span: "sm:col-span-2 sm:row-span-2",
 	},
 	{
 		src: "/music.jpg",
@@ -58,12 +58,17 @@ const photos = [
 		tag: "Dishes",
 		span: "",
 	},
-	{ src: "/dish-3.jpg", alt: "Prawn wasabi bowl", tag: "Bowl", span: "" },
+	{
+		src: "/dish-3.jpg",
+		alt: "Prawn wasabi bowl",
+		tag: "Bowl",
+		span: "col-span-2 sm:col-span-1",
+	},
 	{
 		src: "/company.jpg",
 		alt: "Company",
 		tag: "Cmpany",
-		span: "col-span-2 row-span-2",
+		span: "col-span-2 sm:row-span-2",
 	},
 	{
 		src: "/setting-table.jpeg",

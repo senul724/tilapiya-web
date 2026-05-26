@@ -77,7 +77,7 @@ const galleryPreview = [
 		src: "/exterior.jpg",
 		alt: "Restaurant Exterior",
 		tag: "Roadside View",
-		span: "col-span-2 row-span-2",
+		span: "col-span-2 sm:row-span-2",
 	},
 	{
 		src: "/dine-potrait.jpg",
