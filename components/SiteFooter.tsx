@@ -3,7 +3,7 @@ export function SiteFooter() {
 		<footer id="visit" className="border-t border-border mt-32">
 			<div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-12">
 				<div>
-					<h3 className="font-display text-3xl mb-4">Tilapiya</h3>
+					<img src="/logo.webp" alt="Tilapiya Colombo" className="h-10 md:h-14 w-auto mb-6 opacity-90 hover:opacity-100 transition-opacity" />
 					<p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
 						Dining & socialising, by friends for friends. An indulgent escape in
 						the midst of Colombo.

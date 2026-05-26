@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
 import Link from "next/link";
 
 const heroSlides = [
@@ -116,7 +114,6 @@ export default function Index() {
 
 	return (
 		<div className="min-h-screen">
-			<SiteHeader />
 
 			{/* HERO */}
 			<section className="relative min-h-screen flex items-end overflow-hidden grain">
@@ -457,7 +454,6 @@ export default function Index() {
 				</div>
 			</section>
 
-			<SiteFooter />
 		</div>
 	);
 }

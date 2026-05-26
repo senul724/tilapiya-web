@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
 import { menu } from "@/lib/data/menu";
 import { useRouter } from "next/navigation";
 
@@ -88,7 +86,6 @@ export default function MenuPage() {
 
 	return (
 		<div className="min-h-screen">
-			<SiteHeader />
 
 			{/* HEADER */}
 			<section className="pt-40 pb-20 px-6 border-b border-border">
@@ -193,7 +190,6 @@ export default function MenuPage() {
 				))}
 			</div>
 
-			<SiteFooter />
 		</div>
 	);
 }

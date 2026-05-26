@@ -1,7 +1,5 @@
 "use client";
 
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
 import { occasions, upcoming } from "@/lib/data/events";
 import Link from "next/link";
 
@@ -30,7 +28,6 @@ import Link from "next/link";
 export default function EventsPage() {
 	return (
 		<div className="min-h-screen">
-			<SiteHeader />
 
 			{/* HERO */}
 			<section className="relative pt-40 pb-24 px-6 overflow-hidden border-b border-border">
@@ -195,7 +192,6 @@ export default function EventsPage() {
 				</div>
 			</section>
 
-			<SiteFooter />
 		</div>
 	);
 }

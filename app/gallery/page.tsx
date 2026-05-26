@@ -1,7 +1,5 @@
 "use client";
 
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
 
 // export const Route = createFileRoute("/gallery")({
 // 	head: () => ({
@@ -87,7 +85,6 @@ const photos = [
 export default function GalleryPage() {
 	return (
 		<div className="min-h-screen">
-			<SiteHeader />
 
 			<section className="pt-40 pb-16 px-6 border-b border-border">
 				<div className="max-w-7xl mx-auto">
@@ -137,7 +134,6 @@ export default function GalleryPage() {
 				</a>
 			</section>
 
-			<SiteFooter />
 		</div>
 	);
 }

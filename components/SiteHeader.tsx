@@ -30,9 +30,8 @@ export function SiteHeader() {
 				<Link
 					key={link.href}
 					href={link.href}
-					className={`hover:text-primary transition-colors ${
-						pathname === link.href ? "text-primary" : ""
-					}`}
+					className={`hover:text-primary transition-colors ${pathname === link.href ? "text-primary" : ""
+						}`}
 					onClick={() => setOpen(false)}
 				>
 					{link.label}
@@ -43,20 +42,22 @@ export function SiteHeader() {
 
 	return (
 		<header
-			className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-				scrolled || open
-					? "backdrop-blur-md bg-background/85 border-b border-border py-3"
-					: "py-6"
-			}`}
+			className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled || open
+				? "backdrop-blur-md bg-background/85 border-b border-border py-3"
+				: "py-6"
+				}`}
 		>
 			<div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-				<Link href="/" className="flex items-baseline gap-2">
-					<span className="font-display text-2xl tracking-tight text-foreground">
-						Tilapiya
-					</span>
-					<span className="eyebrow text-[0.6rem] text-muted-foreground">
-						Colombo
-					</span>
+				<Link href="/" className="flex items-center gap-2">
+					<img src="/logo.webp" alt="Tilapiya Colombo" className="h-8 md:h-10 w-auto" />
+					<div className="flex items-baseline gap-2">
+						<span className="font-display text-2xl tracking-tight text-foreground">
+							Tilapiya
+						</span>
+						<span className="eyebrow text-[0.6rem] text-muted-foreground hidden sm:inline-block">
+							Colombo
+						</span>
+					</div>
 				</Link>
 				<nav className="hidden md:flex items-center gap-10 text-sm text-muted-foreground">
 					{links}

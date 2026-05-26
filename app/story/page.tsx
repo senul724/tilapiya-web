@@ -1,13 +1,10 @@
 "use client";
 
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
 import Link from "next/link";
 
 export default function StoryPage() {
 	return (
 		<div className="min-h-screen">
-			<SiteHeader />
 
 			<section className="pt-40 pb-16 px-6 border-b border-border">
 				<div className="max-w-7xl mx-auto">
@@ -123,7 +120,6 @@ export default function StoryPage() {
 				</div>
 			</section>
 
-			<SiteFooter />
 		</div>
 	);
 }

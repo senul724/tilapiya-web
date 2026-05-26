@@ -19,6 +19,9 @@ export const metadata: Metadata = {
 	description: "Best BYOB restuarant in Colombo",
 };
 
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -29,7 +32,11 @@ export default function RootLayout({
 			lang="en"
 			className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
 		>
-			<body className="min-h-screen">{children}</body>
+			<body className="min-h-screen">
+				<SiteHeader />
+				{children}
+				<SiteFooter />
+			</body>
 		</html>
 	);
 }

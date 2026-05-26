@@ -1,7 +1,5 @@
 "use client";
 
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
 import Link from "next/link";
 import { specials } from "@/lib/data/menu";
 
@@ -21,7 +19,6 @@ import { specials } from "@/lib/data/menu";
 export default function SpecialsPage() {
 	return (
 		<div className="min-h-screen">
-			<SiteHeader />
 			<section className="pt-40 pb-20 px-6 border-b border-border">
 				<div className="max-w-7xl mx-auto">
 					<p className="eyebrow mb-6 text-primary">Limited · Weekly Rotation</p>
@@ -90,7 +87,6 @@ export default function SpecialsPage() {
 				</div>
 			</section>
 
-			<SiteFooter />
 		</div>
 	);
 }
