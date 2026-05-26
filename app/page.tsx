@@ -115,7 +115,7 @@ export default function Index() {
 	return (
 		<div className="">
 			{/* HERO */}
-			<section className="relative min-h-[100dvh] flex items-end overflow-hidden grain">
+			<section className="relative min-h-[100vh] flex items-end overflow-hidden grain">
 				<div className="absolute inset-0">
 					{heroSlides.map((s, i) => (
 						<img
