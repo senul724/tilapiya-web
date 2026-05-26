@@ -74,6 +74,34 @@ const weekSpecials = [
 	},
 ];
 
+const galleryPreview = [
+	{
+		src: "/exterior.jpg",
+		alt: "Restaurant Exterior",
+		tag: "Roadside View",
+		span: "col-span-2 row-span-2",
+	},
+	{
+		src: "/dine-potrait.jpg",
+		alt: "Dine IN",
+		tag: "Dine In",
+		span: "row-span-2",
+	},
+	{
+		src: "/music.jpg",
+		alt: "Live band performing on stage",
+		tag: "Live Music",
+		span: "col-span-2 row-span-2",
+	},
+	{ src: "/burger1.jpg", alt: "Signature burger", tag: "Burger", span: "" },
+	{
+		src: "/hero-tilapia.jpg",
+		alt: "Charcoal grilled whole tilapia",
+		tag: "Signature",
+		span: "",
+	},
+];
+
 export default function Index() {
 	const [slide, setSlide] = useState(0);
 	useEffect(() => {
@@ -83,6 +111,8 @@ export default function Index() {
 		);
 		return () => clearInterval(id);
 	}, []);
+
+	const prevSlide = (slide - 1 + heroSlides.length) % heroSlides.length;
 
 	return (
 		<div className="min-h-screen">
@@ -100,8 +130,8 @@ export default function Index() {
 							height={1280}
 							loading={i === 0 ? "eager" : "lazy"}
 							className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
-								i === slide ? "opacity-100 hero-slide" : "opacity-0"
-							}`}
+								i === slide ? "opacity-100" : "opacity-0"
+							} ${i === slide || i === prevSlide ? "hero-slide" : ""}`}
 						/>
 					))}
 					{/* Bottom text-area gradient — dark only where the text sits */}
@@ -350,6 +380,45 @@ export default function Index() {
 											via {r.source}
 										</div>
 									</div>
+								</figcaption>
+							</figure>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* GALLERY PREVIEW */}
+			<section className="py-32 px-6 border-t border-border bg-card/20">
+				<div className="max-w-7xl mx-auto">
+					<div className="flex items-end justify-between mb-16 flex-wrap gap-6">
+						<div>
+							<p className="eyebrow mb-4 text-primary">Through the lens</p>
+							<h2 className="font-display text-5xl md:text-6xl">
+								The Gallery.
+							</h2>
+						</div>
+						<Link
+							href="/gallery"
+							className="text-xs uppercase tracking-[0.3em] text-primary hover:underline underline-offset-8"
+						>
+							View All →
+						</Link>
+					</div>
+					<div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[260px] gap-3 md:gap-4 grid-flow-dense">
+						{galleryPreview.map((p, i) => (
+							<figure
+								key={i}
+								className={`relative overflow-hidden group ${p.span}`}
+							>
+								<img
+									src={p.src}
+									alt={p.alt}
+									loading="lazy"
+									className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+								/>
+								<div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+								<figcaption className="absolute bottom-3 left-4 text-[0.65rem] uppercase tracking-[0.3em] text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+									{p.tag}
 								</figcaption>
 							</figure>
 						))}

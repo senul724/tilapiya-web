@@ -125,4 +125,6 @@
 
 .hero-slide {
   animation: heroKenBurns 9s ease-out forwards;
+  will-change: transform;
+  backface-visibility: hidden;
 }
