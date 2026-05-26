@@ -156,7 +156,7 @@ export default function Index() {
 				<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 					<div className="relative grid grid-cols-2 gap-4">
 						<img
-							src="/interior.jpg"
+							src="/dine-area-potrait.jpg"
 							alt="Restaurant interior"
 							loading="lazy"
 							width={800}
@@ -164,7 +164,7 @@ export default function Index() {
 							className="w-full h-[420px] object-cover translate-y-8"
 						/>
 						<img
-							src="/spread.jpg"
+							src="/dine-potrait.jpg"
 							alt="Food spread"
 							loading="lazy"
 							width={800}

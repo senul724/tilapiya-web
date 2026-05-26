@@ -95,7 +95,7 @@ export default function MenuPage() {
 				<div className="max-w-7xl mx-auto">
 					<p className="eyebrow mb-6">À la carte</p>
 					<h1 className="font-display text-6xl md:text-8xl leading-none">
-						The <span className="italic text-primary">Menu {active}</span>.
+						The <span className="italic text-primary">Menu </span>.
 					</h1>
 					<p className="mt-8 max-w-xl text-muted-foreground">
 						A living document — prepared fresh, served with intent. Prices in
