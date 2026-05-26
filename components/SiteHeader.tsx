@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function SiteHeader() {
 	const [scrolled, setScrolled] = useState(false);
 	const [open, setOpen] = useState(false);
+	const pathname = usePathname();
 	useEffect(() => {
 		const onScroll = () => setScrolled(window.scrollY > 30);
 		onScroll();
@@ -13,43 +15,29 @@ export function SiteHeader() {
 		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
 
+	const navLinks = [
+		{ href: "/", label: "Home" },
+		{ href: "/menu", label: "Menu" },
+		{ href: "/specials", label: "Specials" },
+		{ href: "/gallery", label: "Gallery" },
+		{ href: "/events", label: "Events" },
+		{ href: "/story", label: "Story" },
+	];
+
 	const links = (
 		<>
-			<Link
-				href="/"
-				className="hover:text-primary transition-colors active:text-primary"
-				onClick={() => setOpen(false)}
-			>
-				Home
-			</Link>
-			<Link
-				href="/menu"
-				className="hover:text-primary transition-colors active:text-primary"
-				onClick={() => setOpen(false)}
-			>
-				Menu
-			</Link>
-			<Link
-				href="/specials"
-				className="hover:text-primary transition-colors active:text-primary"
-				onClick={() => setOpen(false)}
-			>
-				Specials
-			</Link>
-			<Link
-				href="/gallery"
-				className="hover:text-primary transition-colors active:text-primary"
-				onClick={() => setOpen(false)}
-			>
-				Gallery
-			</Link>
-			<Link
-				href="/events"
-				className="hover:text-primary transition-colors active:text-primary"
-				onClick={() => setOpen(false)}
-			>
-				Events
-			</Link>
+			{navLinks.map((link) => (
+				<Link
+					key={link.href}
+					href={link.href}
+					className={`hover:text-primary transition-colors ${
+						pathname === link.href ? "text-primary" : ""
+					}`}
+					onClick={() => setOpen(false)}
+				>
+					{link.label}
+				</Link>
+			))}
 		</>
 	);
 
